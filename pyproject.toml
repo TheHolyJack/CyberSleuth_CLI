@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "CyberSleuth"
+version = "0.1.0"
+description = "A simple Windows-friendly CLI cybersecurity toolset"
+authors = [
+    { name="TheHolyJack"}
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+        "certifi",
+        "idna",
+        "rich",
+        "scapy",
+]
+
+[project.scripts]
+cybersleuth = "cybersleuth:main"
