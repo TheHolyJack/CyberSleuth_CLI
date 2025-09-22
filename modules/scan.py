@@ -13,8 +13,8 @@ def scan_port(host, port, console, results):
             console.print(f"[red]Port {port} closed[/red]")
             results.append({"Port": port, "Status": "CLOSED"})
         sock.close()
-    except Exception:
-        results.append({"Port": port, "Status": "ERROR"})
+    except Exception as e:
+        results.append({"Port": port, "Status": f"ERROR | {e}"})
 
 def port_scan(host, ports, console):
     console.print(f"[*] Starting port scan on {host}...")

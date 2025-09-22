@@ -12,6 +12,7 @@ setup(
         "idna",
         "rich",
         "scapy",
+        "requests",
     ],
     entry_points={
         "console_scripts": [
